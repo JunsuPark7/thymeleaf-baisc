@@ -1,0 +1,14 @@
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:fragment="common_header(title,link)">
+
+    <!-- 공통 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/awesomeapp.css}">
+    <link rel="shortcut icon" th:href="@{/images/favicon.ico}">
+    <script type="text/javascript" th:src="@{/sh/scripts/codebase.js}"></script>
+
+    <!-- 공통x (css파일 or title, seo 설정...)-->
+    <title th:repalce="${title}">Title</title>
+    <th:block th:replace="${link}" />
+</head>
